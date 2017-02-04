@@ -1,0 +1,16 @@
+########################
+Unix
+########################
+
+{
+  "cmd": ["/usr/local/bin/node", "$file"],
+  "selector": "source.js"
+}
+########################
+Windows
+########################
+
+{
+  "cmd": ["C:/Program Files/nodejs/node.exe", "$file"],
+  "selector": "source.js"
+}
