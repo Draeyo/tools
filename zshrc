@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/nfs/zfs-student-3/users/vlistrat/.oh-my-zsh
+export ZSH=/nfs/2015/v/vlistrat/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -56,7 +56,7 @@ plugins=(git)
 export PATH="/usr/bin:/bin:/usr/sbin:/sbin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
-source $ZSH/oh-my-zsh.sh
+source $HOME/.oh-my-zsh/oh-my-zsh.sh
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -84,6 +84,17 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias gcw="gcc -Wall -Werror -Wextra"
 alias 42FileChecker="sh ~/Documents/42FileChecker/42FileChecker.sh"
+alias rl="source ~/.zshrc"
+#alias valgrind="valgrind --tool=memcheck --leak-check=full --track-origins=yes --show-reachable=yes"
+alias valgrind="valgrind --tool=memcheck --leak-check=full --track-origins=yes --show-leak-kinds=all --show-reachable=no -v"
+alias 42sh="cd ~/Documents/github/42sh"
+alias e="emacs"
+alias v="vim"
+alias vm="vim"
+alias emdel="rm **/*~"
 
 export PATH="/nfs/zfs-student-3/users/vlistrat/.brew/bin:$PATH"
 export MAIL="vlistrat@student.42.fr"
+
+# Load Homebrew Fix script
+source $HOME/.brew_fix.zsh
