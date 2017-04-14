@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/nfs/2015/v/vlistrat/.oh-my-zsh
+export ZSH=/Users/vlistrat/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -86,14 +86,15 @@ alias gcw="gcc -Wall -Werror -Wextra"
 alias 42FileChecker="sh ~/Documents/42FileChecker/42FileChecker.sh"
 alias rl="source ~/.zshrc"
 #alias valgrind="valgrind --tool=memcheck --leak-check=full --track-origins=yes --show-reachable=yes"
-alias valgrind="valgrind --tool=memcheck --leak-check=full --track-origins=yes --show-leak-kinds=all --show-reachable=no -v"
+alias valgrind="valgrind --tool=memcheck --leak-check=full --track-origins=yes --show-leak-kinds=all --show-reachable=no -v --suppressions=/Users/vlistrat/leaks/leak1.supp --suppressions=/Users/vlistrat/leaks/leak2.supp"
 alias 42sh="cd ~/Documents/github/42sh"
 alias e="emacs"
 alias v="vim"
 alias vm="vim"
 alias emdel="rm **/*~"
+alias norme="norminette"
 
-export PATH="/nfs/zfs-student-3/users/vlistrat/.brew/bin:$PATH"
+export PATH="/Users/vlistrat/.brew/bin:$PATH"
 export MAIL="vlistrat@student.42.fr"
 
 # Load Homebrew Fix script
