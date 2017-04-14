@@ -93,6 +93,7 @@ alias v="vim"
 alias vm="vim"
 alias emdel="rm **/*~"
 alias norme="norminette"
+alias headers="grep By **/*.[ch] | sed 's/^.*vlistrat.*$/OK/'"
 
 export PATH="/Users/vlistrat/.brew/bin:$PATH"
 export MAIL="vlistrat@student.42.fr"
