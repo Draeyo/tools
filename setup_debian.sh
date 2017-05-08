@@ -6,7 +6,7 @@ apt-get update
 apt-get upgrade
 
 echo -e "[ROOT]Installing basics..."
-apt-get install -y sudo git vim fail2ban psad htop wget curl ncdu figlet ufw 
+apt-get install -y sudo git vim fail2ban psad htop wget curl ncdu figlet ufw
 echo -e "Setting up ufw..."
 ufw enable
 ufw default deny incoming
@@ -20,7 +20,7 @@ ufw allow 8080
 ufw status verbose
 
 echo -e "[ROOT]Installing oh-my-zsh..."
-sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+sh -c "`wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -`"
 
 echo -e "[ROOT]Modifying zsh theme..."
 cat ~/.zshrc | sed -e 's/robbyrussell/ys/g' > ~/.zshrc
@@ -28,16 +28,17 @@ cat ~/.zshrc | sed -e 's/robbyrussell/ys/g' > ~/.zshrc
 echo -e "[ROOT]Installing nodejs..."
 curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
 apt-get install -y nodejs
-npm -v > ~/node_versions && npm -v > ~/node_version
+echo "node version : `npm -v >> ~/node_version`"
+echo "npm version : `npm -v > ~/node_versions`"
 
 echo -e "[ROOT]Closing root session..."
 exit
 
 echo -e "[USER]Installing oh-my-zsh..."
-sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+sh -c "`wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -`"
 
 echo -e "[ROOT]Modifying zsh theme..."
-cat ~/.zshrc | sed 's/robbyrussell/ys/g' > ~/.zshrc
+sed -i -e 's/ZSH_THEME="robbyrussell"/ZSH_THEME="ys"/' ~/.zshrc
 
 echo -e "[USER]Installing node global modules..."
 sudo npm install -g pm2
