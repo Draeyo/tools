@@ -1,4 +1,6 @@
-# For OSX only
+if [[ "$1" == "help" ]]
+	echo "Just pass the new wanted hostame as argument of this script :)"
+fi
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
 	sed -i -e 's/'$HOSTNAME'/'$1'/g' /etc/hostname
 elif [[ "$OSTYPE" == darwin* ]]; then
