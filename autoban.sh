@@ -1,5 +1,5 @@
 RESULT=`echo $1 | egrep " ([0-9]{1,3}\.){3}[0-9]{1,3}" | wc -l`
-RESULT6=`echo $1 | egrep "(::[A-Fa-f0-9])|((:[A-Fa-f0-9]{1,4}){2,})" | wc -l `
+RESULT6=`echo $1 | egrep "(::[A-Fa-f0-9])|((:[A-Fa-f0-9]{1,4}){2,})" | wc -l`
 
 if [ $RESULT -eq "1" ]; then
      iptables -i INPUT -s $1 -j DROP
