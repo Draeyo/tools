@@ -28,8 +28,8 @@ cat ~/.zshrc | sed -e 's/robbyrussell/ys/g' > ~/.zshrc
 echo -e "[ROOT]Installing nodejs..."
 curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
 apt-get install -y nodejs
-echo "node version : `npm -v > ~/node_version`"
-echo "npm version : `npm -v >> ~/node_versions`"
+echo "node version : `npm -v`" > ~/node_version
+echo "npm version : `npm -v`" >> ~/node_versions
 
 echo -e "[ROOT]Closing root session..."
 exit
